@@ -2,15 +2,21 @@ const fs = require('fs')
 const path = require('path')
 
 const contactsPath = path.resolve('./db/contacts.json')
-console.log('contactsPath: ', contactsPath)
 
 fs.readFile(contactsPath, 'utf8', (error,data) => {
     if(error){
         console.error(error);
     }
-   // console.log('DATA: ' ,data);
+    console.log('DATA: ' ,data);
 })
 
+fs.writeFile("./db/contacts-updated.json", contactsPath, (err) => {
+    if (err)
+      console.log(err);
+    else {
+      console.log(fs.readFileSync("./db/contacts-updated.json", "utf8"));
+    }
+  });
 
 // (async() => {
 //     try{

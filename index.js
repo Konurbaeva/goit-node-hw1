@@ -27,15 +27,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
     }
   }
 
-// invokeAction({ action: "list"});
- // invokeAction({ action: "get", id: 1});
-// invokeAction({ action: "add", id: 11, name: "Madina", email: "madi@test.de", phone: "123"});
-
- invokeAction({ action: "remove", id: 'JFRIsXmdWPg-Tjfq9lfQI'});
-
-// const actionIndex = process.argv.indexOf("--action");
-
-// if(actionIndex !== -1) {
-//     const action = process.argv[actionIndex + 1];
-//     invokeAction({action})
-// }
+//  invokeAction({ action: "list"});
+//  invokeAction({ action: "get", id: 1});
+//  invokeAction({ action: "add", id: 11, name: "Madina", email: "madi@test.de", phone: "123"});
+ invokeAction({ action: "remove", id: 'dRIxMKsGCslmucQKJ2qLu'});

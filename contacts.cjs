@@ -9,8 +9,8 @@ const listContacts = async() => {
 }
 
 const getContactById = async(id) => {
-    const books = await listContacts();
-    const result = books.find(item => item.id === id)
+    const contacts = await listContacts();
+    const result = contacts.find(item => item.id === id.toString())
 
     return result || null
 }

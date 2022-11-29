@@ -3,13 +3,13 @@ import contacts from './contacts.cjs';
 const invokeAction = async ({ action, id, name, email, phone }) => {
     switch (action) {
       case "list":
-        const allBooks = await contacts.listContacts()
-        console.table(allBooks)
+        const allContacts = await contacts.listContacts()
+        console.table(allContacts)
         break;
   
       case "get":
-        const bookById = await contacts.getContactById(id);
-        console.log('book id: ' , bookById)
+        const contactId = await contacts.getContactById(id);
+        console.log('contact id: ' , contactId)
         break;
   
       case "add":
@@ -25,7 +25,12 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
     }
   }
 
-  
 // invokeAction({ action: "list"});
+ invokeAction({ action: "get", id: 1});
 
-invokeAction({ action: "list"});
+// const actionIndex = process.argv.indexOf("--action");
+
+// if(actionIndex !== -1) {
+//     const action = process.argv[actionIndex + 1];
+//     invokeAction({action})
+// }

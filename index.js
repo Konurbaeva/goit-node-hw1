@@ -4,11 +4,12 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
     switch (action) {
       case "list":
         const allBooks = await contacts.listContacts()
-        console.log(allBooks)
+        console.table(allBooks)
         break;
   
       case "get":
-        // ... id
+        const bookById = await contacts.getContactById(id);
+        console.log('book id: ' , bookById)
         break;
   
       case "add":
@@ -25,4 +26,6 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   }
 
   
+// invokeAction({ action: "list"});
+
 invokeAction({ action: "list"});
